@@ -1,0 +1,30 @@
+@mixin neu-embossed-sm {
+  box-shadow: calc(var(--shadow-size-sm) * -1) calc(var(--shadow-size-sm) * -1)
+      var(--shadow-blur-sm) var(--neu-light-shadow),
+    var(--shadow-size-sm) var(--shadow-size-sm) var(--shadow-blur-sm)
+      var(--neu-dark-shadow);
+  // box-shadow: -0.2rem -0.2rem $shadow-blur var(--neu-light-shadow),
+  //   0.2rem 0.2rem $shadow-blur var(--neu-dark-shadow);
+  border: 1px solid var(--neu-border-color);
+}
+
+@mixin neu-embossed-normal {
+  box-shadow: calc(var(--shadow-size-normal) * -1)
+      calc(var(--shadow-size-normal) * -1) var(--shadow-blur-normal)
+      var(--neu-light-shadow),
+    var(--shadow-size-normal) var(--shadow-size-normal)
+      var(--shadow-blur-normal) var(--neu-dark-shadow);
+  // box-shadow: -0.2rem -0.2rem $shadow-blur var(--neu-light-shadow),
+  //   0.2rem 0.2rem $shadow-blur var(--neu-dark-shadow);
+  border: 1px solid var(--neu-border-color);
+}
+
+@mixin neu-flat {
+  box-shadow: none;
+}
+
+@mixin neu-debossed-lg {
+  box-shadow: inset -0.2rem -0.2rem 4px var(--neu-light-shadow),
+    inset 0.2rem 0.2rem var(--neu-dark-shadow);
+  border-color: var(--neu-border-color);
+}

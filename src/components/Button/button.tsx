@@ -4,6 +4,7 @@ import classNames from "classnames";
 export enum ButtonSize {
   Large = "lg",
   Small = "sm",
+  Mini = "xs",
 }
 
 export enum ButtonType {
@@ -35,7 +36,7 @@ const Button: React.FC<ButtonProps> = (props) => {
     className,
     disabled = false,
     size,
-    btnType = ButtonType.Default,
+    btnType,
     children,
     href,
     ...restProps
@@ -47,8 +48,6 @@ const Button: React.FC<ButtonProps> = (props) => {
     [`btn-${size}`]: size,
     disabled: btnType === ButtonType.Link && disabled,
   });
-
-  console.log(classes);
 
   if (btnType === ButtonType.Link && href) {
     return (

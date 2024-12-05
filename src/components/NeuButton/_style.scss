@@ -1,0 +1,31 @@
+// 先暂定按钮背景颜色和阴影颜色都跟随主题色走
+.btn-embossed-normal {
+  box-sizing: content-box;
+  background-color: inherit;
+  margin: 0.5rem;
+  padding: 0.2rem 0.618rem;
+  @include neu-embossed-normal;
+  // transition: box-shadow 0.1s;
+  &:active,
+  &[active] {
+    @include neu-embossed-sm;
+  }
+  &:hover,
+  &[hover] {
+    background: inherit;
+  }
+}
+
+.neu-btn-primary {
+  @include neu-button-style($primary, $white);
+  @include neu-button-theme($shadow-size-normal, $shadow-blur-normal, $primary);
+}
+
+.neu-btn-danger {
+  @include neu-button-style($danger, $white);
+  @include neu-button-theme($shadow-size-normal, $shadow-blur-normal, $danger);
+}
+
+.neu-btn-link {
+  text-decoration: underline;
+}

@@ -1,0 +1,50 @@
+:root {
+  --theme-neu-light: #fafafa;
+  --theme-neu-dark: #525252;
+  --theme-light: $gray-100;
+  --theme-dark: $gray-900;
+  --theme-customize-color: #fedfa9;
+  --neu-light-shadow: #ffffc2;
+  --neu-dark-shadow: #d8be90;
+  // --theme-high-contrast:
+  --neu-font-color: var(--theme-neu-light);
+  --neu-border-color: var(--theme-neu-light);
+
+  // neu button shadow
+  --shadow-size-xs: 0.1rem;
+  --shadow-blur-xs: 0.2rem;
+  --shadow-size-sm: 0.2rem;
+  --shadow-blur-sm: 0.3rem;
+  --shadow-size-normal: 0.3rem;
+  --shadow-blur-normal: 0.6rem;
+  --shadow-size-lg: 0.4rem;
+  --shadow-blur-lg: 0.6rem;
+}
+
+.app {
+  min-height: 100vh;
+  min-width: 100vw;
+  text-align: center;
+  padding-top: 25%;
+  color: var(--neu-font-color);
+  transition: background-color 0.618s;
+  & > * {
+    margin: 5%;
+  }
+}
+
+.neu-light {
+  background: $neu-light;
+  background: var(--theme-customize-color);
+}
+
+.neu-dark {
+}
+
+.light {
+  background: $light;
+}
+
+.dark {
+  background: $dark;
+}
